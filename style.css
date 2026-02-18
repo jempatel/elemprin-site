@@ -75,3 +75,6 @@ nav a { color: var(--text); font-weight: 600; }
 .hero-img img { width: 100%; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow); object-fit: cover; max-height: 340px; }
 .hero-img::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; pointer-events: none; }
 .card img.thumb { width: 100%; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 10px; object-fit: cover; max-height: 160px; }
+
+/* Logo image */
+.logo img.logo-img { height: 28px; width: auto; filter: drop-shadow(0 0 6px rgba(92, 225, 230, 0.35)); }
