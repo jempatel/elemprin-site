@@ -76,5 +76,14 @@ nav a { color: var(--text); font-weight: 600; }
 .hero-img::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; pointer-events: none; }
 .card img.thumb { width: 100%; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 10px; object-fit: cover; max-height: 160px; }
 
+/* Institutional Components */
+.spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 20px; }
+.spec-item { background: var(--card); padding: 16px; }
+.spec-label { display: block; font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 4px; }
+.spec-value { font-weight: 700; color: var(--accent); font-family: 'JetBrains Mono', monospace, ui-monospace; }
+
+.access-lock { background: rgba(0,0,0,0.3); border: 1px dashed var(--border); padding: 30px; border-radius: 16px; text-align: center; position: relative; overflow: hidden; }
+.access-lock::before { content: "RESTRICTED"; position: absolute; top: 10px; right: -30px; background: var(--accent-3); color: #000; padding: 4px 40px; transform: rotate(45deg); font-size: 10px; font-weight: 900; letter-spacing: 2px; }
+
 /* Logo image */
 .logo img.logo-img { height: 28px; width: auto; filter: drop-shadow(0 0 6px rgba(92, 225, 230, 0.35)); }

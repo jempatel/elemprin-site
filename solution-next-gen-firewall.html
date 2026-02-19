@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next-Gen Firewall | Autonomous Cybersecurity | Elemprin</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Elemprin's Next-Gen Firewall (NGFW) uses autonomous agents to provide real-time, self-healing perimeter security for modern enterprises.">
+</head>
+<body class="solution-page">
+    <header>
+        <nav>
+            <a href="index.html">Elemprin</a>
+            <a href="#features">Features</a>
+            <a href="#proof">Proof</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="badge">Perimeter Defense · Agentic Control</div>
+            <h1>Next-Gen Firewall: Autonomous Perimeter Defense</h1>
+            <p>Traditional firewalls are static. Ours is alive. We use autonomous agents to provide real-time, self-healing perimeter security for modern enterprises.</p>
+            <div class="status-bar">
+                <div class="status-inner">
+                    <div class="status-dot"></div>
+                    <div>
+                        <div class="status-text">Firewall Pulse</div>
+                        <div class="status-rotating" id="status-rotating">Scanning for unauthorized ingress...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ctas">
+                <button class="btn btn-primary">Download Technical Brief</button>
+                <a href="index.html#contact" class="btn btn-secondary">Request Demo</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Specifications</h2>
+            <div class="spec-grid">
+                <div class="spec-item"><span class="spec-label">Throughput</span><span class="spec-value">200 Gbps</span></div>
+                <div class="spec-item"><span class="spec-label">Threat Inspection</span><span class="spec-value">120 Gbps</span></div>
+                <div class="spec-item"><span class="spec-label">Agent Latency</span><span class="spec-value">&lt;2ms</span></div>
+                <div class="spec-item"><span class="spec-label">Simultaneous Sessions</span><span class="spec-value">25M</span></div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <h2>Why Elemprin NGFW?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>AI-Powered Detection</h3>
+                    <p>Identify and block sophisticated malware and zero-day attacks in real-time using advanced machine learning models.</p>
+                </div>
+                <div class="card">
+                    <h3>Deep Visibility</h3>
+                    <p>Gain complete control over applications, users, and devices across your entire network.</p>
+                </div>
+                <div class="card">
+                    <h3>Hyperscale Performance</h3>
+                    <p>Sustainable, scalable security that doesn't bottleneck your high-speed data-rich traffic.</p>
+                </div>
+                <div class="card">
+                    <h3>Unified Management</h3>
+                    <p>Simplify operations by managing your security posture across physical, virtual, and cloud environments from a single pane of glass.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technology Preview: Infrastructure Logic Bot (ILB)</h2>
+            <div class="access-lock">
+                <h3>Autonomous Logic Shunting</h3>
+                <p>The NGFW will integrate directly with our autonomous ILB, enabling "Logic-Based Shunting" where suspicious traffic is not just blocked, but isolated and analyzed by agentic sub-systems.</p>
+                <button class="btn btn-primary">Request Researcher Access</button>
+                <p style="font-size: 11px; margin-top: 15px; color: var(--muted);">Verification required for Technical PoC access.</p>
+            </div>
+        </section>
+
+        <section id="capabilities" class="section">
+            <h2>Key Capabilities</h2>
+            <ul>
+                <li><strong>Integrated SD-WAN</strong>: Securely interconnect offices while optimizing application performance and user experience.</li>
+                <li><strong>Zero Trust Network Access (ZTNA)</strong>: Built-in capabilities to enforce secure access for users anywhere.</li>
+                <li><strong>Quantum-Safe Protection</strong>: Future-proof your defense with NIST-approved algorithms.</li>
+            </ul>
+        </section>
+
+        <section id="proof" class="proof-section">
+            <h2>Proof of Concept</h2>
+            <p>In a recent deployment for a Tier-1 Bank, the Elemprin NGFW reduced false positives by 40% while identifying 15% more sophisticated exfiltration attempts than the incumbent solution.</p>
+            <a href="case-study-unified.html" class="btn">View Case Study</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Elemprin. All Rights Reserved. Built by CDGO + Critique engine.</p>
+    </footer>
+
+    <script>
+        const items = [
+          'Scanning for unauthorized ingress...',
+          'Updating stateful rules...',
+          'Analyzing payload signatures...',
+          'Verifying edge isolation...',
+          'Pulse stable.'
+        ];
+        let idx = 0;
+        setInterval(() => {
+          idx = (idx + 1) % items.length;
+          const el = document.getElementById('status-rotating');
+          if (el) el.textContent = items[idx];
+        }, 6500);
+    </script>
+</body>
+</html>
