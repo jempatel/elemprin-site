@@ -27,7 +27,7 @@
         <h1>Defense that reasons,<br>not just reacts.</h1>
         <p>The Elemprin Infrastructure Logic Bot (ILB) continuously scans, analyzes, and acts across your entire perimeter—powered by deterministic LangGraph reasoning and automated Shuffle orchestration.</p>
         <div class="badge-row">
-          <div class="chip active">Validation Hash: fb86db5b</div>
+          <div class="chip active" id="live-hash">Validation Hash: fb86db5b</div>
           <div class="chip">Monthly Briefing: Feb 2026 Ready</div>
           <div class="chip">Engine: v1.0.2-prod</div>
         </div>
@@ -41,22 +41,22 @@
     <div class="logic-status-matrix">
       <div class="logic-status-card">
         <h3>Shunt Rate</h3>
-        <div class="value">8.42%</div>
+        <div class="value" id="live-shunt">8.42%</div>
         <span class="highlight">Behavioral Entropy Filter</span>
       </div>
       <div class="logic-status-card">
         <h3>Latency Delta</h3>
-        <div class="value">-12ms</div>
+        <div class="value" id="live-latency">-12ms</div>
         <span class="highlight">Path Optimization Active</span>
       </div>
       <div class="logic-status-card">
         <h3>Validation Hash</h3>
-        <div class="value">fb86db5b</div>
+        <div class="value" id="live-hash-matrix">fb86db5b</div>
         <span class="highlight">SHA256 Integrity Verified</span>
       </div>
       <div class="logic-status-card">
         <h3>Confidence</h3>
-        <div class="value">98.4%</div>
+        <div class="value" id="live-confidence">98.4%</div>
         <span class="highlight">Multi-Agent Consensus</span>
       </div>
     </div>
@@ -221,6 +221,22 @@
       idx = (idx + 1) % items.length;
       document.getElementById('status-rotating').textContent = items[idx];
     }, 6500);
+
+    // Live Metrics Simulation
+    function updateLiveMetrics() {
+      const hashes = ['fb86db5b', 'ac92d114', 'e3b12f90', '72d44c1a'];
+      const randomHash = hashes[Math.floor(Math.random() * hashes.length)];
+      const shunt = (7.5 + Math.random() * 2).toFixed(2) + '%';
+      const latency = '-' + (10 + Math.floor(Math.random() * 5)) + 'ms';
+      const confidence = (97 + Math.random() * 2.5).toFixed(1) + '%';
+
+      if(document.getElementById('live-hash')) document.getElementById('live-hash').textContent = 'Validation Hash: ' + randomHash;
+      if(document.getElementById('live-hash-matrix')) document.getElementById('live-hash-matrix').textContent = randomHash;
+      if(document.getElementById('live-shunt')) document.getElementById('live-shunt').textContent = shunt;
+      if(document.getElementById('live-latency')) document.getElementById('live-latency').textContent = latency;
+      if(document.getElementById('live-confidence')) document.getElementById('live-confidence').textContent = confidence;
+    }
+    setInterval(updateLiveMetrics, 8000);
   </script>
 </body>
 </html>
