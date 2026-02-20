@@ -5,33 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecosystem Architecture | Institutional Proof | Elemprin</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes scrollUp {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+    </style>
 </head>
 <body class="architecture-page">
     <header>
-        <nav>
-            <a href="index.html">Elemprin</a>
-            <a href="solution-next-gen-firewall.html">NGFW</a>
-            <a href="solution-csaas.html">CSaaS</a>
-            <a href="#logic">Logic Bot</a>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-dot"></div>
+                Elemprin
+            </a>
+            <div style="display: flex; gap: 18px;">
+                <a href="solution-next-gen-firewall.html">NGFW</a>
+                <a href="solution-csaas.html">CSaaS</a>
+                <a href="architecture.html" style="color: var(--accent);">Architecture</a>
+            </div>
         </nav>
     </header>
 
     <main class="container">
         <section class="hero">
-            <div class="badge">Technical Blueprint · Autonomous Ops</div>
-            <h1>The Elemprin Ecosystem Architecture</h1>
-            <p>A unified, agentic approach to infrastructure security. We don't just stack tools; we integrate autonomous logic across the entire perimeter.</p>
+            <div>
+                <div class="badge">Technical Blueprint · Autonomous Ops</div>
+                <h1>The Elemprin Ecosystem Architecture</h1>
+                <p>A unified, agentic approach to infrastructure security. We don't just stack tools; we integrate autonomous logic across the entire perimeter.</p>
+            </div>
         </section>
 
         <section class="section">
             <h2>Unified Logic Flow</h2>
-            <div class="card" style="padding: 40px; border-style: dashed; text-align: center;">
-                <div class="spec-label">Architecture Diagram Placeholder</div>
-                <p style="color: var(--muted); font-size: 14px;">[ Interactive SVG Logic Map: Traffic -> NGFW (Edge) -> ILB (Logic Layer) -> CSaaS (Management) ]</p>
-                <div class="spec-grid" style="max-width: 600px; margin: 20px auto;">
-                    <div class="spec-item"><span class="spec-label">Detection Layer</span><span class="spec-value">NGFW (Edge)</span></div>
-                    <div class="spec-item"><span class="spec-label">Decision Layer</span><span class="spec-value">ILB (LangGraph)</span></div>
-                    <div class="spec-item"><span class="spec-label">Response Layer</span><span class="spec-value">Shuffle (Automated)</span></div>
+            <div class="grid">
+                <div class="card" style="padding: 40px; border-style: dashed; text-align: center;">
+                    <div class="spec-label">Architecture Diagram</div>
+                    <p style="color: var(--muted); font-size: 14px;">[ Traffic -> NGFW (Edge) -> ILB (Logic Layer) -> CSaaS (Management) ]</p>
+                    <div class="spec-grid" style="max-width: 600px; margin: 20px auto;">
+                        <div class="spec-item"><span class="spec-label">Detection Layer</span><span class="spec-value">NGFW (Edge)</span></div>
+                        <div class="spec-item"><span class="spec-label">Decision Layer</span><span class="spec-value">ILB (LangGraph)</span></div>
+                        <div class="spec-item"><span class="spec-label">Response Layer</span><span class="spec-value">Shuffle (Automated)</span></div>
+                    </div>
+                </div>
+                <div class="card" style="background: #000; border: 1px solid var(--accent-3); display: flex; flex-direction: column;">
+                    <div class="spec-label" style="color: var(--accent-3); margin-bottom: 10px;">Live Logic Feed (Simulated)</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; height: 180px; overflow: hidden; position: relative; background: #050505; padding: 10px; border-radius: 4px;">
+                        <div style="position: absolute; bottom: 0; width: 100%; animation: scrollUp 15s linear infinite;">
+                            <p style="color: #10b981; margin: 2px 0;">[PASS] PKT-098: Reputation 0.98 ... ALLOW</p>
+                            <p style="color: #ef4444; margin: 2px 0;">[SHUNT] PKT-099: Entropy 0.92 ... ISOLATE</p>
+                            <p style="color: #10b981; margin: 2px 0;">[PASS] PKT-100: Origin Trusted ... ALLOW</p>
+                            <p style="color: #f59e0b; margin: 2px 0;">[WARN] PKT-101: Frequency Spike ... RATE_LIMIT</p>
+                            <p style="color: #10b981; margin: 2px 0;">[PASS] PKT-102: Auth Valid ... ALLOW</p>
+                            <p style="color: #ef4444; margin: 2px 0;">[SHUNT] PKT-103: Rep 0.04 ... ISOLATE</p>
+                            <p style="color: #10b981; margin: 2px 0;">[PASS] PKT-104: Payload Clean ... ALLOW</p>
+                            <p style="color: #ef4444; margin: 2px 0;">[SHUNT] PKT-105: Logic Anomaly ... ISOLATE</p>
+                        </div>
+                    </div>
+                    <div class="spec-label" style="font-size: 9px; margin-top: 10px; color: var(--muted);">ENGINE: LangGraph-ILB-v1.0.2</div>
                 </div>
             </div>
         </section>
@@ -60,8 +91,10 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Elemprin. All Rights Reserved. Institutional Grade Autonomy.</p>
+    <footer class="container">
+        <div class="footer">
+            <p>&copy; 2026 Elemprin. All Rights Reserved. Institutional Grade Autonomy.</p>
+        </div>
     </footer>
 </body>
 </html>
