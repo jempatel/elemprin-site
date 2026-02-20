@@ -70,6 +70,7 @@
         <section id="logic" class="section">
             <h2>The Infrastructure Logic Bot (ILB)</h2>
             <p>At the heart of the Elemprin ecosystem is the ILB—a stateful reasoning engine that classifies traffic not by signatures, but by intent and logic shunting.</p>
+            
             <div class="grid">
                 <div class="card">
                     <h3>Stateful Reasoning</h3>
@@ -79,6 +80,25 @@
                     <h3>Autonomous Shunting</h3>
                     <p>Automatically isolates suspicious logical patterns into high-interaction sandboxes for analysis.</p>
                 </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h3 style="color: var(--accent-3);">Core Logic Rule-Set (Active)</h3>
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">RULE_01: Entropy Analysis</span>
+                        <span class="spec-value">SHUNT IF payload_entropy > 0.8</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RULE_02: Reputation Scoring</span>
+                        <span class="spec-value">DPI IF origin_reputation < 0.2</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RULE_03: Frequency Logic</span>
+                        <span class="spec-value">LIMIT IF request_rate > 1000/s</span>
+                    </div>
+                </div>
+                <p style="font-size: 11px; color: var(--muted); margin-top: 15px;">Note: Logic rules are dynamically weighted by the LangGraph state controller based on ambient network risk levels.</p>
             </div>
         </section>
 
